@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://localhost:4000">
+  <title>Docker相关概念整理 | Kevin的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Docker有什么好处
+标准化应用发布，docker容器包含了运行环境和可执行程序，可以跨平台和主机使用；
+节约时间，快速部署和启动，VM启动一般是分钟级，docker容器启动是秒级；
+方便构建基于SOA架构或微服务架构的系统，通过服务编排，更好的松耦合；
+节约成本，以前一个虚拟机至少需要几个G的磁盘空间，docker容器可以减少到MB级；
+方便持续集成，通过与代码进行关联使持续集成非常方便；
+可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker相关概念整理">
+<meta property="og:url" content="http://localhost:4000/2016/12/21/Docker相关概念整理/index.html">
+<meta property="og:site_name" content="Kevin的博客">
+<meta property="og:description" content="Docker有什么好处
+标准化应用发布，docker容器包含了运行环境和可执行程序，可以跨平台和主机使用；
+节约时间，快速部署和启动，VM启动一般是分钟级，docker容器启动是秒级；
+方便构建基于SOA架构或微服务架构的系统，通过服务编排，更好的松耦合；
+节约成本，以前一个虚拟机至少需要几个G的磁盘空间，docker容器可以减少到MB级；
+方便持续集成，通过与代码进行关联使持续集成非常方便；
+可">
+<meta property="og:updated_time" content="2016-12-21T08:23:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker相关概念整理">
+<meta name="twitter:description" content="Docker有什么好处
+标准化应用发布，docker容器包含了运行环境和可执行程序，可以跨平台和主机使用；
+节约时间，快速部署和启动，VM启动一般是分钟级，docker容器启动是秒级；
+方便构建基于SOA架构或微服务架构的系统，通过服务编排，更好的松耦合；
+节约成本，以前一个虚拟机至少需要几个G的磁盘空间，docker容器可以减少到MB级；
+方便持续集成，通过与代码进行关联使持续集成非常方便；
+可">
+  
+    <link rel="alternative" href="/atom.xml" title="Kevin的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/assets/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/assets/blogImg/kevin.png" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Kevin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">You only live once.</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags">随笔</a></li>
+	        
+				<li><a href="/photos">相册</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a data-idx="2" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/yoloooooooo" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/yolooooooonce" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="http://zhihu.com/people/yoloooooooo" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Kevin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/assets/blogImg/kevin.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Kevin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">You only live once.</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags">随笔</a></li>
+		        
+					<li><a href="/photos">相册</a></li>
+		        
+					<li><a href="/archives">归档</a></li>
+		        
+		        
+		        	<li><a href="/archives/">所有文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/yoloooooooo" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/yolooooooonce" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="http://zhihu.com/people/yoloooooooo" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-Docker相关概念整理" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Docker相关概念整理
+    </h1>
+  
+
+        <a href="/2016/12/21/Docker相关概念整理/" class="archive-article-date">
+  	<time datetime="2016-12-21T08:08:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-21</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Docker有什么好处"><a href="#Docker有什么好处" class="headerlink" title="Docker有什么好处"></a>Docker有什么好处</h2><ol>
+<li>标准化应用发布，docker容器包含了运行环境和可执行程序，可以跨平台和主机使用；</li>
+<li>节约时间，快速部署和启动，VM启动一般是分钟级，docker容器启动是秒级；</li>
+<li>方便构建基于SOA架构或微服务架构的系统，通过服务编排，更好的松耦合；</li>
+<li>节约成本，以前一个虚拟机至少需要几个G的磁盘空间，docker容器可以减少到MB级；</li>
+<li>方便持续集成，通过与代码进行关联使持续集成非常方便；</li>
+<li>可以作为集群系统的轻量主机或节点，在IaaS平台上，已经出现了CaaS，通过容器替代原来的主机。</li>
+</ol>
+<a id="more"></a>
+<h2 id="什么是虚拟化技术"><a href="#什么是虚拟化技术" class="headerlink" title="什么是虚拟化技术"></a>什么是虚拟化技术</h2><p>虚拟化技术技术做个比喻来说就好比你有套房子，然后把里面隔成很多小的单间来出租，因此通常可以提供房屋利用率，获得更好的收益。从技术角度讲，虚拟化就是在一台主机上运行多个相互隔离的实例。这儿里面包含两层意思，一是相互隔离，即彼此之间没有影响；二是实例，可以是一个完整的操作系统，比如windows, linux系统，也可以是可执行的程序。</p>
+<h2 id="Docker容器和Docker镜像的区别"><a href="#Docker容器和Docker镜像的区别" class="headerlink" title="Docker容器和Docker镜像的区别"></a>Docker容器和Docker镜像的区别</h2><h3 id="Docker镜像"><a href="#Docker镜像" class="headerlink" title="Docker镜像"></a>Docker镜像</h3><p>假设Linux内核是第0层，那么无论怎么运行Docker，它都是运行于内核层之上的。这个Docker镜像，是一个只读的镜像，位于第1层，它不能被修改或不能保存状态。一个Docker镜像可以构建于另一个Docker镜像之上，这种层叠关系可以是多层的。第1层的镜像层我们称之为基础镜像（Base Image），其他层的镜像（除了最顶层）我们称之为父层镜像（Parent Image）。这些镜像继承了他们的父层镜像的所有属性和设置，并在Dockerfile中添加了自己的配置。Docker镜像通过镜像ID进行识别。镜像ID是一个64字符的十六进制的字符串。但是当我们运行镜像时，通常我们不会使用镜像ID来引用镜像，而是使用镜像名来引用。镜像可以发布为不同的版本，这种机制我们称之为标签（Tag）。</p>
+<h3 id="Docker容器"><a href="#Docker容器" class="headerlink" title="Docker容器"></a>Docker容器</h3><p>它会在所有的镜像层之上增加一个可写层。这个可写层有运行在CPU上的进程，而且有两个不同的状态：运行态（Running）和退出态（Exited）。这就是Docker容器。当我们使用docker run启动容器，Docker容器就进入运行态，当我们停止Docker容器时，它就进入退出态。 当我们有一个正在运行的Docker容器时，从运行态到停止态，我们对它所做的一切变更都会永久地写到容器的文件系统中。要切记，对容器的变更是写入到容器的文件系统的，而不是写入到Docker镜像中的。 我们可以用同一个镜像启动多个Docker容器，这些容器启动后都是活动的，彼此还是相互隔离的。我们对其中一个容器所做的变更只会局限于那个容器本身。 如果对容器的底层镜像进行修改，那么当前正在运行的容器是不受影响的，不会发生自动更新现象。 如果想更新容器到其镜像的新版本，那么必须当心，确保我们是以正确的方式构建了数据结构，否则我们可能会导致损失容器中所有数据的后果。 64字符的十六进制的字符串来定义容器ID，它是容器的唯一标识符。容器之间的交互是依靠容器ID识别的，由于容器ID的字符太长，我们通常只需键入容器ID的前4个字符即可。当然，我们还可以使用容器名，但显然用4字符的容器ID更为简便。</p>
+<h2 id="Docker是否安全"><a href="#Docker是否安全" class="headerlink" title="Docker是否安全"></a>Docker是否安全</h2><p>Docker本身是共享操作系统的进程，不存在不安全一说，如果Docker不安全，那么所有的linux程序都是不安全的，而目前全球基本上90%以上的网站都是运行在linux上的。Docker本身是容器技术的一种，所谓容器就像一个盒子，我们只对暴露需要暴露的端口，比如一个网站就只暴露80端口。而传统的服务器和云主机，基本是开放了所有的端口，或者是大多数端口，这种暴露其实是很危险的，因此Docker反而会让系统更安全可靠。</p>
+<h2 id="容器有哪些网络模式"><a href="#容器有哪些网络模式" class="headerlink" title="容器有哪些网络模式"></a>容器有哪些网络模式</h2><ol>
+<li>None - 在该模式下容器没有对外网络，本机只有一个回路地址。</li>
+<li>Container - 与另一个容器共享网络。</li>
+<li>Host - 与主机共享网络</li>
+<li>Bridge - Docker 默认的网络模式，在这种模式下，Docker 容器与外部的通信都是通过 iptable 来实现的。</li>
+<li>Overlay - Docker 目前原生的跨主机多子网模型，主要是通过 vxlan 技术来实现的。</li>
+</ol>
+<h2 id="容器如何进行持久化"><a href="#容器如何进行持久化" class="headerlink" title="容器如何进行持久化"></a>容器如何进行持久化</h2><p>容器在退出后并不会更改镜像。所以，如果希望保存容器中的数据，就需要通过 commit 来保存成镜像。 另外，用户可以使用 Volume来实现数据持久化存储，保存在容器中产生或使用的文件。容器可以把数据写在 Volume 上，Volume 可以在不同的容器之间共享和重用数据，而且容器数据的备份、恢复和迁移都可以通过 Volume 实现。</p>
+<h2 id="Dockerfile书写的最佳实践是什么"><a href="#Dockerfile书写的最佳实践是什么" class="headerlink" title="Dockerfile书写的最佳实践是什么"></a>Dockerfile书写的最佳实践是什么</h2><ol>
+<li>通过Dockerfile所构建的镜像应该越精简越好；</li>
+<li>尽量不要安装非必要的软件包；</li>
+<li>一个容器只运行一个单独的实例，将具有耦合度的应用分别安装到不同的容器里面；</li>
+<li>慎重引入新的数据层；</li>
+<li>将准备安装的软件包安装字母顺序排列。这样可以回避重复安装软件包的情况，同时也有助于进行软件更新。通过添加”\”分割命令，可以增强代码的可读性；</li>
+<li>用官方提供的镜像版本作为基础镜像，减小镜像的体积；</li>
+<li>将多条RUN 命令使用”/“连接起来，这样更易于理解，可以方便维护；</li>
+<li>为镜像定义一个比较通用的端口，比如一个用来提供Apache web服务的镜像，最好是暴露80端口；</li>
+<li>Dockerfile开头的几句指令应该固定下来，不要每次都随意更改，这样可以利用缓存；</li>
+<li>通过-t标记来构建镜像，有助于用户管理每个创建的镜像；</li>
+<li>不要在Dockerfile中映射公有端口；</li>
+<li>使用CMD和ENTRYPOINT时，一定要用数组语法，而且CMD和ENTRYPOINT 结合使用更好；</li>
+<li>不要开机初始化；</li>
+<li>在push之前，在本地先构建一下，确保在本地构建的镜像在任何地方都可以正常运行；</li>
+<li>不要在构建中升级版本，如果更新时试图修改 init 或改变容器的内容，更新可能会失败，还可能会产生不一致的镜像；</li>
+<li>FROM命令应该包含基础镜像的完整仓库名和标签；</li>
+<li>使用指令组合，比如apt-get update应该与apt-get install组合。</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://localhost:4000/2016/12/21/Docker相关概念整理/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/21/RabbitMQ的安装/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          RabbitMQ的安装
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/20/Hexo-GitHub-搭建个人博客-Mac版/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo + GitHub 搭建个人博客(Mac版)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Kevin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js?v=4.0.0.js"></script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">RabbitMQ</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
