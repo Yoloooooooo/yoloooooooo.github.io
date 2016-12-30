@@ -1,0 +1,756 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>BIRT报表培训 - @演说.io</title>
+
+    <meta name="keywords" content="演说，yanshuo, yanshuo.io, 演说.io, 空中演说, 展示文稿, HTML 展示文稿, Web 展示文稿">
+    <meta name="description" content="创作真正跨平台的 HTML5 展示文稿，让你的分享到达世界的任何一个角落">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Reveal base style -->
+    <link rel="stylesheet" href="https://yanshuo.io/assets/player/css/reveal.min.css">
+
+    <!-- Yanshuo.io seed style -->
+    <link rel="stylesheet" href="https://yanshuo.io/assets/player/atcss/at-block.min.css">
+    <link rel="stylesheet" href="https://yanshuo.io/assets/player/atcss/at-hljs-theme-bundler.min.css">
+    <link rel="stylesheet" href="https://yanshuo.io/assets/player/atcss/at-reveal-theme-bundler.min.css">
+
+    <!-- Source Sans Web Fonts -->
+    <link rel="stylesheet" href="https://yanshuo.io/assets/player/lib/font/source-sans-pro/source-sans-pro.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'https://yanshuo.io/assets/player//css/print/pdf.css' : '';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+  		<script src="lib/js/html5shiv.js"></script>
+  		<![endif]-->
+
+    <!-- style for "critical path" -->
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- TODO: a lightweighted loading -->
+
+    <!-- main slides -->
+    <div id="YS" class="at-code-lh-12" style="width:100%;height:100%;" data-reveal-theme="wechat" data-highlight-theme="zenburn" data-ys-title="BIRT报表培训" data-ys-user="熊章河" data-ys-transition="convex" data-ys-backgroundtransition="default" data-ys-transitionspeed="default">
+        <div class="reveal">
+            <div class="slides">
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:84.48414738646102px;top:104.83290488431878px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h1>BIRT报表培训</h1>
+                        </article>
+                    </div>
+                    <div style="left:84.48414738646102px;top:283.22193658954586px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h2><a href="http://yanshuo.io" target="_blank" rel="external">@</a><span style="color:#68BC00">XiongZhangHe</span></h2>
+                            <p><span style="color:#009CE0">yoloooooooo.coding.me</span></p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>2016.12.29</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:79px;top:270px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h1>&nbsp;</h1>
+                            <p>&nbsp;</p>
+                        </article>
+                    </div>
+                    <div style="left:74.88688946015424px;top:77.4121679520137px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h3 style="text-align:left">一、库文件</h3>
+                            <h3 style="text-align:left">二、普通网格报表</h3>
+                            <h3 style="text-align:left">三、分组报表</h3>
+                            <h3 style="text-align:left">四、交叉报表</h3>
+                            <h3 style="text-align:left">五、钻取报表</h3>
+                            <h3 style="text-align:left">六、图表报表</h3>
+                            <h3 style="text-align:left">七、常见问题汇总</h3>
+                            <h3 style="text-align:left">八、报表通用规范</h3>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h2>库文件</h2>
+                        </article>
+                    </div>
+                    <div style="left:81.58899676375404px;top:262.33009708737865px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <ul>
+                                <li>数据源</li>
+                                <li>数据集</li>
+                                <li>报表参数</li>
+                                <li>主页控制</li>
+                                <li>主题</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:36.66372904786591px;top:138.9624551849559px;width:887.0917573872473px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;该库文件中现提供GreenPlum和Oracle两种数据源。数据源配置如下图所示：</p>
+                            <p style="text-align:left">
+                                <!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="图片_x0020_58" o:spid="_x0000_i1025" type="#_x0000_t75"
+ style='width:487pt;height:303pt;mso-wrap-style:square;
+ mso-position-horizontal-relative:page;mso-position-vertical-relative:page'>
+ <v:imagedata src="file://localhost/Users/Kevin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image001.png"
+  o:title=""/>
+</v:shape><![endif]-->
+                                <!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="图片_x0020_58" o:spid="_x0000_i1025" type="#_x0000_t75"
+ style='width:487pt;height:303pt;mso-wrap-style:square;
+ mso-position-horizontal-relative:page;mso-position-vertical-relative:page'>
+ <v:imagedata src="file://localhost/Users/Kevin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image001.png"
+  o:title=""/>
+</v:shape><![endif]-->
+                                <!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="图片_x0020_58" o:spid="_x0000_i1025" type="#_x0000_t75"
+ style='width:487pt;height:303pt;mso-wrap-style:square;
+ mso-position-horizontal-relative:page;mso-position-vertical-relative:page'>
+ <v:imagedata src="file://localhost/Users/Kevin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image001.png"
+  o:title=""/>
+</v:shape><![endif]-->
+                            </p>
+                        </article>
+                    </div>
+                    <div style="left:41.75683193498653px;top:38.749087761152px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h3 style="text-align:left"><span style="color:#73D8FF">数据源</span></h3>
+                        </article>
+                    </div>
+                    <div style="width:932.8521298270055px;height:333.93402328589906px;left:14.953840218019451px;top:291.35554118154374px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww1.sinaimg.cn/mw690/a1db4bf0gw1fb6s94kwegj218c0fwjvq.jpg"></article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:72.10047434238896px;top:69.59034066407935px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left"><span style="color:#F44E3B">备注：</span>由于birt设计器工具中没有提供GreenPlum数据库的连接驱动包，所以在使用GP数据源的时&nbsp; 候必须先自己手动添加GP的驱动包greenplum.driver-5.1.1.jar。添加的步骤请先点击上图中的Manage&nbsp;Drivers按钮，然后根据提示信息将GP驱动包添加到birt设计器中。添加完后重新打开birt设计器，然后会&nbsp;&nbsp;&nbsp;
+                                发现在Driver Class中多了一个com.pivotal.jdbc.GreenplumDriver (v-1.-1)的驱动。</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:44.279496288129415px;top:45.603535246842924px;width:870.1572490063936px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h3 style="text-align:left"><span style="color:#73D8FF">数据集</span></h3>
+                        </article>
+                    </div>
+                    <div style="left:43.06988854663987px;top:149.6248382923674px;width:882.2533264212891px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;通用数据集一般供具有相同查询条件数据集的报表使用。如客户属性、客户类型、地区及产品等等。如下图列出的一些常用数据集。</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="width:620px;height:648px;left:170px;top:26px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww4.sinaimg.cn/mw690/a1db4bf0gw1fb6s93z9dej20h80i0q5c.jpg"></article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:56.921517895644676px;top:44.75204829667962px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h3 style="text-align:left"><span style="color:#73D8FF">报表参数</span></h3>
+                        </article>
+                    </div>
+                    <div style="left:56.05250493422045px;top:147.7165149794863px;width:866.528425781925px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;报表参数供报表的查询条件使用。如下图中列出了DAP中一些常用的报表查询条件。</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="width:598px;height:698px;left:181px;top:1px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww2.sinaimg.cn/mw690/a1db4bf0gw1fb6s92r0btj20gm0jen02.jpg"></article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:34.449862977441285px;top:51.651573954290654px;width:893.139796094695px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 其中START_DAY到YEAR都为LightBI预置的时间查询条件，分为点时间查询条件和段时间查询条件。其他的基本都为公共维度查询条件。</p>
+                            <p style="text-align:left">&nbsp;</p>
+                            <ul>
+                                <li style="text-align:left"><span style="color:#F44E3B">点时间：DAY、WEEK、MONTH、YEAR</span></li>
+                                <li style="text-align:left">
+                                    <p><span style="color:#F44E3B">段时间（需成对出现）：START_DAY和END_DAY、START_MONTH和END_MONTH、START_YEAR和END_YEAR</span></p>
+                                </li>
+                            </ul>
+                            <p style="text-align:left">&nbsp;</p>
+                            <p style="text-align:left">以START_DAY举例来说，双击打开START_DAY</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="width:930.7932807733093px;height:621.8778296181096px;left:18.23218283781397px;top:37.246673578710904px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww2.sinaimg.cn/mw690/a1db4bf0gw1fb7ey7yjcoj20z40ngaed.jpg"></article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:63.275099360635906px;top:28.881976844651803px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align: left;">Name为参数名称，供报表主数据集中设置的?引用使用。</p>
+                        </article>
+                    </div>
+                    <div style="width:933.9685767835068px;height:175.96509417660275px;left:17.85414257420478px;top:131.37981683082774px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww4.sinaimg.cn/mw690/a1db4bf0gw1fb7eya46noj21em09iq65.jpg"></article>
+                    </div>
+                    <div style="width:946.809028193165px;height:303.25332642128905px;left:7.805093644907036px;top:347.1550889925695px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww4.sinaimg.cn/mw690/a1db4bf0gw1fb7ey9b8jcj21kg0i2tgd.jpg"></article>
+                    </div>
+                    <div style="left:63.275099360635906px;top:297.41489545533096px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="font-size:20px">图12-1</span></p>
+                        </article>
+                    </div>
+                    <div style="left:75.69431484361499px;top:641.2666321064455px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="font-size:20px">图12-2</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:48.75980646276136px;top:16.785899429756363px;width:873.7860722308623px;height:auto00;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">图12-1中START_DAY对应图12-2中第一个问号，END_DAY对应第二个问号。</p>
+                        </article>
+                    </div>
+                    <div style="left:46.34059097978227px;top:130.48902712977363px;width:884.6725419042682px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">Prompt text为显示名称，即前台页面显示的报表查询条件的名称。Default value为显示的默认值，BirtDateTime.addDay(BirtDateTime.today(),-1)表示的是当前时间的前一天。</p>
+                        </article>
+                    </div>
+                    <div style="left:48.75980646276136px;top:351.8472438223605px;width:872.5764644893727px;height:auto0;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left"><span style="color:#F44E3B">注意！！！在Dap预置的时间查询条件中，参数名称不能随意写，必须是上述列出的如START_DAY、END_DAY、DAY、MONTH等，而且这些时间查询条件的类型必须设置成字符串类型，否则后台将无法解析这些时间参数，前台页面也不会将这些参数解析为相应的时间控件。其他非时间查询条件的名称可以随意写。</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:59.64627613616727px;top:36.139623293589096px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h3 style="text-align:left"><span style="color:#73D8FF">主页控制</span></h3>
+                        </article>
+                    </div>
+                    <div style="left:30.615690340418176px;top:122.02177293934682px;width:905.2358735095904px;height:auto0;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 页面控制中主要包括对页眉、页脚和正文页的设置。设置如图14-1所示：</p>
+                        </article>
+                    </div>
+                    <div style="left:65.69431484361499px;top:542.9652669777086px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="font-size:20px">图14-1</span></p>
+                        </article>
+                    </div>
+                    <div style="width:937.0174529116986px;height:290.5940202067926px;left:14.515292897874545px;top:253.0872995561855px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww3.sinaimg.cn/large/a1db4bf0gw1fb7fy80zv8j21pg0j243q.jpg"></article>
+                    </div>
+                    <div style="left:34.244513564886816px;top:592.55918437878px;width:899.1878348021428px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">上图中主要是设置Type为Custom，然后自定义纸张的宽和高。报表导出时会按这个宽高导出。</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:39.082944530845005px;top:32.51080006912045px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h3 style="text-align: left;"><span style="color:#73D8FF">主题</span></h3>
+                        </article>
+                    </div>
+                    <div style="left:37.873336789355456px;top:124.4409884223259px;width:888.3013651287368px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">主题即报表的样式。设置报表的样式有两种方式：</p>
+                            <ol>
+                                <li><span style="color:#F44E3B">直接在birt设计器中设计</span></li>
+                                <li><span style="color:#F44E3B">写CSS文件，然后导入到库文件中</span></li>
+                            </ol>
+                            <p>&nbsp;</p>
+                            <p style="text-align:left">一般来说直接在报表设计器上设计报表的样式风格即可。如图16-1为库文件中的报表样式，此样式风格跟Dap的风格保持一致。</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="width:468.9320388349514px;height:700px;left:245.5339805825243px;top:0;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww4.sinaimg.cn/mw690/a1db4bf0gw1fb6s95ggpmj20fc0mwwj9.jpg"></article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:29.406082598928638px;top:53.07413167444271px;width:906.44548125108px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <ol>
+                                <li>margin-cell：设置单元格之间的外边距；</li>
+                                <li>crosstab-*：为交叉报表用的样式；</li>
+                                <li>logo：自定义样式，设置报表logo的样式；</li>
+                                <li>group-nodisplay：分组报表时隐藏一列使用；</li>
+                                <li>table-detail-cell-number-format: 单元格数据格式化；</li>
+                                <li>table-title：报表标题使用样式；</li>
+                                <li>table-*：预制样式，网格报表默认使用。</li>
+                            </ol>
+                        </article>
+                    </div>
+                    <div style="left:28.196474857439092px;top:430.47174701918095px;width:877.414895455331px;height:auto0;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">&nbsp; &nbsp; &nbsp; &nbsp; 其中预定义样式，设计器会根据报表的种类自动加载相应的样式。自定义样式需要自己手动添加到报表的相应部位。手动添加的步骤：选中要添加报表样式的地方右击，选择Style，再选择Apply Style，最后选择需要添加的自定义样式。</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:77.79039225851045px;top:80.89510972870227px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h2>普通网格报表</h2>
+                        </article>
+                    </div>
+                    <div style="left:66.90392258510454px;top:363.9433212372559px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="color:#AEA1FF">演示一遍</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:71.74235355106272px;top:99.03922585104544px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h2>分组报表</h2>
+                        </article>
+                    </div>
+                    <div style="left:76.90392258510454px;top:373.9433212372559px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="color:#AEA1FF">演示一遍</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:86.90392258510454px;top:383.9433212372559px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="color:#AEA1FF">演示一遍</span></p>
+                        </article>
+                    </div>
+                    <div style="left:81.74235355106272px;top:109.03922585104544px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h2>交叉报表</h2>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:91.74235355106272px;top:119.03922585104544px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h2>钻取报表</h2>
+                        </article>
+                    </div>
+                    <div style="left:96.90392258510454px;top:393.9433212372559px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="color:#AEA1FF">演示一遍</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:86.34059097978226px;top:405.1529289787454px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="color:#AEA1FF">演示一遍</span></p>
+                        </article>
+                    </div>
+                    <div style="left:88.43666839467772px;top:127.8296181095559px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h2>图表报表</h2>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:71.82529808190772px;top:51.947468463798174px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h2>常见问题汇总</h2>
+                        </article>
+                    </div>
+                    <div style="left:35.454121306376365px;top:228.4672541904268px;width:862.8996025574563px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">场景一（库文件存放位置）</p>
+                        </article>
+                    </div>
+                    <div style="left:33.03490582339727px;top:147.42353551062726px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h3 style="text-align:left"><span style="color:#73D8FF">库文件问题汇总</span></h3>
+                        </article>
+                    </div>
+                    <div style="left:39.08294453084499px;top:296.20528771384136px;width:889.5109728702264px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left"><span style="color:#F44E3B">问</span>：部署环境的时候库文件应该放在哪？是跟报表源文件一样通过Report Management页面进行上传吗？</p>
+                            <p style="text-align:left">&nbsp;</p>
+                            <p style="text-align:left"><span style="color:#FA28FF">答</span>：不是，库文件是要自己手动通过FTP工具上传到服务器上去的。上传的目录要和报表源文件的目录保持一致。</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:27.310005184033184px;top:54.60687748401588px;width:862.8996025574563px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">场景二（库文件的修改）</p>
+                        </article>
+                    </div>
+                    <div style="left:23.358043891480904px;top:135.3274580957318px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left"><span style="color:#F44E3B">问</span>：如何修改库文件？</p>
+                            <p style="text-align:left"><span style="color:#FA28FF">答</span>：双击打开库文件，然后选择要修改的项修改即可。</p>
+                        </article>
+                    </div>
+                    <div style="width:619.0837814303188px;height:411.8252980819077px;left:120.86419188376922px;top:287.4258683255573px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww1.sinaimg.cn/mw690/a1db4bf0gw1fb7kbncsfkj21bi0vmtmu.jpg"></article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:34.244513564886816px;top:33.72040781061px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h3>场景四（报表与库文件的信息同步）</h3>
+                        </article>
+                    </div>
+                    <div style="left:34.244513564886816px;top:129.27941938828408px;width:884.6725419042682px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left"><span style="color:#F44E3B">问</span>：当报表部署到现场后，库文件里面的数据源信息也改成了现场的数据库连接信息，但为何报表展示的时候还是查不出数据或是报数据库连接错误的信息？</p>
+                            <p style="text-align:left">&nbsp;</p>
+                            <p style="text-align:left"><span style="color:#FA28FF">答</span>：那是因为修改后的库文件里面的信息没有同步到各个报表里面去。这是birt设计器里面一个不太智能的地方。所以这一点我们在开发报表的时候一定要注意，报表开发完后一定要检查下报表中引用库文件里面各项的状态。什么意思呢？请看图26-1：</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="width:542.7295175420194px;height:651.6156903404182px;left:208.63524122899034px;top:0;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww3.sinaimg.cn/mw690/a1db4bf0gw1fb7kldcs18j20hq0lawih.jpg"></article>
+                    </div>
+                    <div style="left:58.436668394677724px;top:648.2011404872991px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="font-size:20px">图26-1</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:34.244513564886816px;top:66.37981683082774px;width:889.5109728702264px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">图26-1中引用库文件中各项的状态表示当库文件修改后，是可以正常同步到该报表的。如果你修改了引用库文件的各项信息，那么各项的显示将会变成如图28-1的状态，则表示修改后的库文件信息是不会同步到该报表的。</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="width:655.9635765321071px;height:595.5458786936236px;left:148.38938850947775px;top:19.567651632970453px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww2.sinaimg.cn/mw690/a1db4bf0gw1fb7klq8bg8j20gw0fc411.jpg"></article>
+                    </div>
+                    <div style="left:59.96941420425091px;top:619.4936927596336px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="font-size:20px">图28-1</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:31.82529808190773px;top:53.074131674442725px;width:889.5109728702264px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">所以如果你是为了测试随手改了一下被引用项的信息，最后一定要记得删除然后从库文件中重新引用该项。如果说是需求需要改某些东西，那么你先看看这个需求是否大部分报表里面都有。若有，则直接改库文件即可；若无，则最好就不要引用库文件里面的公共资源，那么我们就可以直接在该报表中创建所需要的信息。</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:24.567651632970446px;top:43.39726974252635px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h3 style="text-align:left"><span style="color:#73D8FF">数据类报表问题汇总</span></h3>
+                        </article>
+                    </div>
+                    <div style="left:25.777259374459994px;top:123.23138068083637px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align: left;">场景一（分页设置）</p>
+                        </article>
+                    </div>
+                    <div style="left:26.986867115949543px;top:197.01745291169863px;width:896.7686193191637px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left"><span style="color:#F44E3B">问</span>：如何设置报表的分页显示？</p>
+                            <p style="text-align:left">&nbsp;</p>
+                            <p style="text-align:left"><span style="color:#FA28FF">答</span>：选中table，然后点击属性栏里的Page Break（默认是每页显示40条记录，交叉报表中无分页功能），如图30-1所示：</p>
+                        </article>
+                    </div>
+                    <div style="width:732.583129674887px;height:208.09607741489546px;left:77.42020291787011px;top:443.11802315534817px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww2.sinaimg.cn/mw690/a1db4bf0gw1fb6s93zzj5j21kw0g50zb.jpg"></article>
+                    </div>
+                    <div style="left:61.502160013824096px;top:644.0089856575082px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="font-size:20px">图30-1</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:25.777259374459994px;top:39.768446518057715px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align: left;">场景二（去掉自带日期）</p>
+                        </article>
+                    </div>
+                    <div style="left:24.567651632970453px;top:123.23138068083637px;width:918.5415586659755px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left"><span style="color:#F44E3B">问</span>：如何去掉报表底部自带的时间显示？</p>
+                            <p style="text-align:left">&nbsp;</p>
+                            <p style="text-align:left"><span style="color:#FA28FF">答</span>：选择XML Source，删除图31-1中那行代码即可。</p>
+                        </article>
+                    </div>
+                    <div style="width:846.9835752277968px;height:391.57646448937277px;left:57.717820127591146px;top:266.70528771384136px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww2.sinaimg.cn/mw690/a1db4bf0gw1fb7lig9558j211a0h87bo.jpg"></article>
+                    </div>
+                    <div style="left:69.082944530845px;top:647.9609469500605px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="font-size:20px">图31-1</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:37.873336789355456px;top:33.72040781061px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align: left;">场景三（数据汇总）</p>
+                        </article>
+                    </div>
+                    <div style="left:37.873336789355456px;top:113.55451874891999px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left"><span style="color:#F44E3B">问</span>：如何在页脚Footer行对指标数据进行汇总？</p>
+                            <p style="text-align:left">&nbsp;</p>
+                            <p style="text-align:left"><span style="color:#FA28FF">答</span>：如图33-1所示，选择聚合函数：</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="width:610.5324822068137px;height:660.082944530845px;left:174.73375889659312px;top:0;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww2.sinaimg.cn/mw690/a1db4bf0gw1fb7log5mjmj20pw0s0jwt.jpg"></article>
+                    </div>
+                    <div style="left:74.24451356488682px;top:651.9129082426127px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="font-size:20px">图33-1</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:28.196474857439085px;top:28.881976844651803px;width:916.1223431829964px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left">然后如图34-1所示function选择sum求和，Exception选择要求和的字段即可。</p>
+                        </article>
+                    </div>
+                    <div style="width:487.454366145938px;height:535.4933471574218px;left:225.38634725362505px;top:123.37998963193365px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww4.sinaimg.cn/mw690/a1db4bf0gw1fb7lola2o8j20ks0mun05.jpg"></article>
+                    </div>
+                    <div style="left:76.98686711594954px;top:652.2360463106963px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="font-size:20px">图34-1</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:29.406082598928634px;top:36.13962329358909px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align: left;">场景六（分组报表单元格合并）</p>
+                        </article>
+                    </div>
+                    <div style="left:25.777259374459994px;top:136.53706583722135px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left"><span style="color:#F44E3B">问</span>：在分组报表中如何合并以某一字段进行分组的相同单元格？</p>
+                            <p style="text-align:left">&nbsp;</p>
+                            <p style="text-align:left"><span style="color:#FA28FF">答</span>：选择插入分组字段header的空白处，然后在属性选择中将Drop设置为Detail即可。如图36-1所示：</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="width:947.156067420453px;height:507.8952825298082px;left:6.4219662897734615px;top:44.039225851045444px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww2.sinaimg.cn/mw690/a1db4bf0gw1fb7lj2y70nj218q0o0th6.jpg"></article>
+                    </div>
+                    <div style="left:59.16588906168999px;top:561.8386037670641px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="font-size:20px">图36-1</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:37.873336789355456px;top:32.51080006912044px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align: left;">场景八（输出sql日志调试）</p>
+                        </article>
+                    </div>
+                    <div style="left:39.082944530845px;top:111.1353032659409px;width:897.9782270606532px;height:auto0;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p style="text-align:left"><span style="color:#F44E3B">问</span>：如何打印出报表中的sql日志来进行简单的调试？</p>
+                            <p style="text-align:left">&nbsp;</p>
+                            <p style="text-align:left"><span style="color:#FA28FF">答</span>：选中要调试的数据集，点击script，在beforeOpen中加入日志输出语句（绿色方块内的为日志输出语句）。如图38-1所示：</p>
+                        </article>
+                    </div>
+                    <div style="left:33.56332400475617px;top:393.20098288732544px;width:878.6245031968205px;height:304.04354587869364px;" class="at-block at-block--pure">
+                        <article class="at-block-content MarkdownBlock"><pre class="hljs"><code>importPackage(Packages.java.io);
+<span class="hljs-keyword">out</span> = <span class="hljs-keyword">new</span> printWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"D:\debuginfo.txt"</span>,<span class="hljs-literal">true</span>));
+
+<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"queryText:--&gt;"</span> + <span class="hljs-keyword">this</span>.queryText);
+<span class="hljs-keyword">out</span>.close();
+</code></pre>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="width:690px;height:644px;left:133.79039225851045px;top:14.694314843614999px;" class="at-block at-block--pure">
+                        <article class="at-block-content"><img src="http://ww4.sinaimg.cn/mw690/a1db4bf0gw1fb7llrvf06j210s0ycnga.jpg"></article>
+                    </div>
+                    <div style="left:63.117850354242265px;top:649.253499222395px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="font-size:20px">图38-1</span></p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:80.20960774148955px;top:276.85156385000863px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p>更多F&amp;Q请查看文档《Birt报表开发指南_V2.0》</p>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:84.16156903404182px;top:55.56765163297045px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h2>报表通用规范</h2>
+                        </article>
+                    </div>
+                    <div style="left:47.873336789355456px;top:168.55883877656817px;width:865.3188180404354px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <ul>
+                                <li>指标统计（即数值类型）字段右对齐，且需用千分位隔开，其他左对齐。</li>
+                                <li>单元格外边距之间需要引用cell-margin样式，否则有些情况下单元格文本会粘在一起。</li>
+                                <li>纸张大小需要视字段个数来自定义宽，否则用默认的纸张大小，字段多的话会导出不全。</li>
+                                <li>报表明细数据统一引用table-detail-cell-number-format，不要每个报表单独去设置样式。</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:41.98200514138817px;top:42.48500428449012px;width:880.8911739503px;height:auto;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <ul>
+                                <li>stat_date字段统一在sql里进行格式化，其他时间字段（带时分秒的）可以在birt设计器里用DateFormat进行设置。</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+                <section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="convex-in convex-out">
+                    <div style="left:80px;top:260px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <h1>END.</h1>
+                        </article>
+                    </div>
+                    <div style="left:72px;top:384px;width:800px;" class="at-block at-block--pure">
+                        <article class="at-block-content">
+                            <p><span style="font-size:22px">自豪的采用 <a href="http://yanshuo.io" target="_blank" rel="external">@演说.io</a></span></p>
+                        </article>
+                    </div>
+                </section>
+                <style>
+                    .at-block {
+                        position: absolute
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
+
+    <!-- dependencies -->
+    <script src="https://yanshuo.io/assets/player/lib/js/head.min.js"></script>
+    <script src="https://yanshuo.io/assets/player/js/reveal.min.js"></script>
+
+    <!-- init -->
+    <script>
+        Reveal.initialize({
+            controls: true,
+            history: true,
+            center: false,
+
+            transition: 'convex',
+            backgroundTransition: 'default',
+            transitionSpeed: 'default',
+
+            // no marked.js
+            // no markdown.js
+            // no highlight.js
+            dependencies: [{
+                src: 'https://yanshuo.io/assets/player/lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'https://yanshuo.io/assets/player/plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'https://yanshuo.io/assets/player/plugin/notes/notes.js',
+                async: true
+            }]
+        });
+    </script>
+</body>
+
+</html>
