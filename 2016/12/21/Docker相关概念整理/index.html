@@ -26,7 +26,7 @@
 节约成本，以前一个虚拟机至少需要几个G的磁盘空间，docker容器可以减少到MB级；
 方便持续集成，通过与代码进行关联使持续集成非常方便；
 可">
-<meta property="og:updated_time" content="2016-12-30T14:30:58.000Z">
+<meta property="og:updated_time" content="2017-01-01T04:51:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker相关概念整理">
 <meta name="twitter:description" content="Docker有什么好处
@@ -224,7 +224,9 @@
 <li>在push之前，在本地先构建一下，确保在本地构建的镜像在任何地方都可以正常运行；</li>
 <li>不要在构建中升级版本，如果更新时试图修改 init 或改变容器的内容，更新可能会失败，还可能会产生不一致的镜像；</li>
 <li>FROM命令应该包含基础镜像的完整仓库名和标签；</li>
-<li>使用指令组合，比如apt-get update应该与apt-get install组合。</li>
+<li><p>使用指令组合，比如apt-get update应该与apt-get install组合。</p>
+<p><span id="busuanzi_container_page_pv" style="color:green"><br>访客:<span id="busuanzi_value_page_pv"></span>次<br></span></p>
+</li>
 </ol>
 
       
@@ -390,16 +392,14 @@
     	<div class="footer-left">
     		&copy; 2017 Kevin
     	</div>
-			<div>
 				<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 				<span id="busuanzi_container_site_pv">
-    			本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    			pv:<span id="busuanzi_value_site_pv"></span>
 				</span>
-				&nbsp;&nbsp;&nbsp;
+				|
 				<span id="busuanzi_container_site_uv">
- 		 			本站访客数<span id="busuanzi_value_site_uv"></span>人次
+ 		 			uv:<span id="busuanzi_value_site_uv"></span>
 				</span>
-			</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
@@ -442,15 +442,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">BIRT</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Docker</a>
               </li>
              
               <li class="article-tag-list-item">
