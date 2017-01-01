@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://localhost:4000">
-  <title>Archives: 2016/5 | Kevin的博客</title>
+  <title>RabbitMQ的安装 | Kevin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Kevin的博客">
-<meta property="og:url" content="http://localhost:4000/archives/2016/05/index.html">
+  <meta name="description" content="1.安装CentOS 72.CentOS7默认不能上网12$ vi /etc/sysconfig/network-scripts/ifcfg // 将 ONBOOT=&amp;quot;no&amp;quot; 改成yes$ reboot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RabbitMQ的安装">
+<meta property="og:url" content="http://localhost:4000/2016/10/21/RabbitMQ的安装/index.html">
 <meta property="og:site_name" content="Kevin的博客">
+<meta property="og:description" content="1.安装CentOS 72.CentOS7默认不能上网12$ vi /etc/sysconfig/network-scripts/ifcfg // 将 ONBOOT=&amp;quot;no&amp;quot; 改成yes$ reboot">
+<meta property="og:updated_time" content="2016-12-30T14:30:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kevin的博客">
+<meta name="twitter:title" content="RabbitMQ的安装">
+<meta name="twitter:description" content="1.安装CentOS 72.CentOS7默认不能上网12$ vi /etc/sysconfig/network-scripts/ifcfg // 将 ONBOOT=&amp;quot;no&amp;quot; 改成yes$ reboot">
   
   
     <link rel="icon" href="/assets/image/favicon.png">
@@ -146,54 +150,187 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-RabbitMQ的安装" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/31/Linux下MySQL的安装-rpm安装包方式/" class="archive-article-date">
-  	<time datetime="2016-05-30T23:41:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-31</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/31/Linux下MySQL的安装-rpm安装包方式/">Linux下MySQL的安装(rpm安装包方式)</a>
+    <h1 class="article-title" itemprop="name">
+      RabbitMQ的安装
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <a href="/2016/10/21/RabbitMQ的安装/" class="archive-article-date">
+  	<time datetime="2016-10-21T08:26:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-21</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-安装CentOS-7"><a href="#1-安装CentOS-7" class="headerlink" title="1.安装CentOS 7"></a>1.安装CentOS 7</h3><h3 id="2-CentOS7默认不能上网"><a href="#2-CentOS7默认不能上网" class="headerlink" title="2.CentOS7默认不能上网"></a>2.CentOS7默认不能上网</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/sysconfig/network-scripts/ifcfg // 将 ONBOOT=&quot;no&quot; 改成yes</div><div class="line">$ reboot</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="3-安装ifconfig工具"><a href="#3-安装ifconfig工具" class="headerlink" title="3.安装ifconfig工具"></a>3.安装ifconfig工具</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yum install -y net-tools</div></pre></td></tr></table></figure>
+<h3 id="4-开启telnet"><a href="#4-开启telnet" class="headerlink" title="4.开启telnet"></a>4.开启telnet</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ yum install -y telnet-server</div><div class="line">$ yum install -y telnet</div><div class="line">$ systemctl enable xinetd.service</div><div class="line">$ systemctl enable telnet.socket</div><div class="line">$ systemctl start telnet.socket</div><div class="line">$ systemctl start xinetd</div></pre></td></tr></table></figure>
+<h3 id="5-安装erlang"><a href="#5-安装erlang" class="headerlink" title="5.安装erlang"></a>5.安装erlang</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rpm -Uvh  http://www.rabbitmq.com/releases/erlang/erlang-18.1-1.el7.centos.x86_64.rpm</div></pre></td></tr></table></figure>
+<p>安装好之后用 erl 命令检查，halt().退出</p>
+<h3 id="6-安装rabbitMQ"><a href="#6-安装rabbitMQ" class="headerlink" title="6.安装rabbitMQ"></a>6.安装rabbitMQ</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ rpm -Uvh http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.1/rabbitmq-server-3.6.1-1.noarch.rpm</div><div class="line">$ rpm -qa|grep rabbitmq  // 查看安装是否成功</div><div class="line">$ service rabbitmq-server start  // 开启rabbitmq-server服务</div><div class="line">$ rabbitmqctl status  // 查看rabbitmq状态</div><div class="line">$ chkconfig rabbit-server on  // 设置开机自动启动服务</div></pre></td></tr></table></figure>
+<h3 id="7-安装web管理插件"><a href="#7-安装web管理插件" class="headerlink" title="7.安装web管理插件"></a>7.安装web管理插件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ rabbitmq-plugins enable rabbitmq_management</div><div class="line">$ service rabbitmq-server restart</div></pre></td></tr></table></figure>
+<p>此时本地会访问不了 <a href="http://ip:15672/" target="_blank" rel="external">http://ip:15672/</a>, 原因是CentOS7 开启了firewalld防火墙，需要关闭，正式环境可以安装iptables防火墙，关闭firewalld, 参考<a href="http://blog.csdn.net/love5117/article/details/43817463" target="_blank" rel="external">文章</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ systemctl stop firewalld.service</div><div class="line">$ systemctl disable firewalld.service</div></pre></td></tr></table></figure></p>
+<h3 id="8-增加rabbitmq用户"><a href="#8-增加rabbitmq用户" class="headerlink" title="8.增加rabbitmq用户"></a>8.增加rabbitmq用户</h3><p>默认guest用户只能访问<a href="http://localhost:15672/">http://localhost:15672/</a> ,再创建一个用户远程访问<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ rabbitmqctl  add_user  username  password</div><div class="line">$ rabbitmqctl  set_user_tags  username  administrator</div><div class="line">$ rabbitmqctl list_users  // 查看rabbitmq所有用户</div></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/image/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/image/wxpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RabbitMQ/">RabbitMQ</a></li></ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://localhost:4000/2016/10/21/RabbitMQ的安装/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/21/Docker相关概念整理/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Docker相关概念整理
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/31/Linux下MySQL的安装-rpm安装包方式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux下MySQL的安装(rpm安装包方式)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="RabbitMQ的安装" data-title="RabbitMQ的安装" data-url="http://localhost:4000/2016/10/21/RabbitMQ的安装/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
 
 
           </div>
@@ -226,8 +363,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
